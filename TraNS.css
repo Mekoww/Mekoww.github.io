@@ -1,0 +1,50 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #007274;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.flashcard {
+  width: 200px;
+  height: 150px;
+  background-color: #fc8dd3;
+  border: 2px solid #333;
+  border-radius: 10px;
+  margin: 20px auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.flashcard .question,
+.flashcard .answer {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  transition: transform 0.3s ease;
+}
+
+.flashcard .question {
+  z-index: 2;
+}
+
+.flashcard .answer {
+  background-color: #07ffa8;
+  transform: translateY(100%);
+}
+
+.flashcard:hover .question {
+  transform: translateY(-100%);
+}
+
+.flashcard:hover .answer {
+  transform: translateY(0);
+}
